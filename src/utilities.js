@@ -12,7 +12,7 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- * =============================================================================
+
  */
 import * as posenet from "@tensorflow-models/posenet";
 import * as tf from "@tensorflow/tfjs";
@@ -42,7 +42,7 @@ function setDatGuiPropertyCss(propertyText, liCssString, spanCssString = "") {
   var spans = document.getElementsByClassName("property-name");
   for (var i = 0; i < spans.length; i++) {
     var text = spans[i].textContent || spans[i].innerText;
-    if (text == propertyText) {
+    if (text === propertyText) {
       spans[i].parentNode.parentNode.style = liCssString;
       if (spanCssString !== "") {
         spans[i].style = spanCssString;
